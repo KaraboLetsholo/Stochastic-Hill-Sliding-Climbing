@@ -11,7 +11,7 @@ import wandb
 # The optimization process involves generating random perturbations to the current solution
 # and accepting or rejecting these perturbations based on their impact on the objective function.
 
-wandb.init()
+wandb.init(project="nonlinear_optimization", name="stochastic_hill_climbing")
 
 @jax.jit
 def objective(params):
@@ -44,3 +44,4 @@ while count < 1000:
             #print(f"Iteration: {count}, Objective: {obj(params)}, Params: {params}")
 
             wandb.log({"Iteration": count, "Objective": obj(params), "Params": params})
+
