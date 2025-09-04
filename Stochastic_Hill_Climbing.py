@@ -34,12 +34,13 @@ while count < 1000:
             neighbor = params + distribution
             new_param_value = jax.random.choice(jax.random.PRNGKey(0), a=neighbor, shape=(), replace=True)
             count += 1
-            print(f"Iteration: {count}, Objective: {obj(params)}, Params: {params}")
+            #print(f"Iteration: {count}, Objective: {obj(params)}, Params: {params}")
             wandb.log({"Iteration": count, "Objective": obj(params), "Params": params})
         else:
             distribution = jax.random.uniform(jax.random.PRNGKey(0), shape=(10,), minval=-1.0, maxval=1.0)
             neighbor = params + distribution
             new_param_value = jax.random.choice(jax.random.PRNGKey(0), a=neighbor, shape=(), replace=True)
             count += 1
-            print(f"Iteration: {count}, Objective: {obj(params)}, Params: {params}")
+            #print(f"Iteration: {count}, Objective: {obj(params)}, Params: {params}")
+
             wandb.log({"Iteration": count, "Objective": obj(params), "Params": params})
