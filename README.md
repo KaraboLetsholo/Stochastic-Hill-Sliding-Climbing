@@ -41,5 +41,18 @@ pip install -r requirements.txt
 ## 4. Run the script
 
 ```
-python Stochastic_Hill_Climbing
+python Stochastic_Hill_Climbing.py
 ```
+
+### Results
+
+## for $f(x) = x^2$:
+
+<img width="861" height="315" alt="image" src="https://github.com/user-attachments/assets/467d1da1-1e7b-4dbc-9f28-84ca61d5f602" />
+
+For a thousand iterations.
+
+To change the objective function, change the objective_function() function in Stochastic_Hill_Climbing.py and change the parameters to match the dimension. Also create a wandb account to see the results or you can uncomment the print statements.
+
+go to ```https://wandb.ai/authorize``` and copy the api key to paste it.
+
