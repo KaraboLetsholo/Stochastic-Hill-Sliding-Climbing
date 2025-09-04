@@ -4,7 +4,9 @@ This is a script for normal stochastic hill climbing, it optimizes a given funct
 # How to use it
 
 ## 1. Create a virtual environment:
-$python -m venv .venv$
+```python
+python -m venv .venv
+```
 
 The virtual environment will allow you to run the project is a environment with all the dependecies need.
 
